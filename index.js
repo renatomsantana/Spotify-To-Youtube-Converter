@@ -70,3 +70,6 @@ app.post('/convert', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+// Serve static files (Frontend)
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
